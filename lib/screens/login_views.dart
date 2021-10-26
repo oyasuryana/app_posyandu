@@ -59,21 +59,20 @@ Widget _userField() {
     children: <Widget>[
       TextFormField(
         decoration: const InputDecoration(
-            border: UnderlineInputBorder(),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(
-                  color: ColorPalette.underLineTextField, width: 0.5),
-            ),
-            focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.white,
-                width: 1.0,
-              ),
-            ),
-            hintText: 'Username',
-            hintStyle: TextStyle(color: ColorPalette.hintColor),
+          border: UnderlineInputBorder(),
+          enabledBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: ColorPalette.underLineTextField, width: 0.5),
           ),
-        
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.white,
+              width: 1.0,
+            ),
+          ),
+          hintText: 'Username',
+          hintStyle: TextStyle(color: ColorPalette.hintColor),
+        ),
         style: const TextStyle(color: Colors.white),
         autofocus: true,
       ),
@@ -82,27 +81,23 @@ Widget _userField() {
 }
 
 Widget _passField() {
-  return Column(
-    children: <Widget>[
-      TextFormField(
-       decoration: const InputDecoration (
-         border: UnderlineInputBorder(),
-         enabledBorder:UnderlineInputBorder(
-           borderSide: BorderSide(
-             color:Colors.white,
-             width:1.0
-           ), 
-         ),
-         hintText: 'Password',
-         hintStyle: TextStyle(color:ColorPalette.hintColor), 
-       ), 
-        style: const TextStyle(color: Colors.white),
-        autofocus: true,
-        obscureText: true,
-      )
-    ]
-  );
+  return Column(children: <Widget>[
+    TextFormField(
+      decoration: const InputDecoration(
+        border: UnderlineInputBorder(),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white, width: 1.0),
+        ),
+        hintText: 'Password',
+        hintStyle: TextStyle(color: ColorPalette.hintColor),
+      ),
+      style: const TextStyle(color: Colors.white),
+      autofocus: true,
+      obscureText: true,
+    )
+  ]);
 }
+
 // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
 Widget _buildButton(BuildContext) {
   return Column(
@@ -147,4 +142,3 @@ Widget _buildButton(BuildContext) {
     ],
   );
 }
-
