@@ -10,3 +10,5 @@ Project ini menggunakan Fluter Versi 2.5.2 dengan bahasa pemrograman Dart versi 
 
 Aplikasi ini adalah frontend bagi ibu hamil / Ibu Bayi dan Balita untuk mendata perkembangan kunjungan ke Posyandu. 
 
+![image](https://drive.google.com/uc?export=view&id=1gHci6HolXlKYNTvDep3_bcBmKjXn8Lvm
+)

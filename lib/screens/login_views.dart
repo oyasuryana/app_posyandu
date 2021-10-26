@@ -18,6 +18,7 @@ class LoginPage extends StatelessWidget {
           _iconLogin(),
           _titleDescription(),
           _userField(),
+          _passField(),
           _buildButton(context)
         ],
       ),
@@ -69,7 +70,8 @@ Widget _userField() {
                 width: 1.0,
               ),
             ),
-            hintText: 'Username'
+            hintText: 'Username',
+            hintStyle: TextStyle(color: ColorPalette.hintColor),
           ),
         
         style: const TextStyle(color: Colors.white),
@@ -79,7 +81,28 @@ Widget _userField() {
   );
 }
 
-
+Widget _passField() {
+  return Column(
+    children: <Widget>[
+      TextFormField(
+       decoration: const InputDecoration (
+         border: UnderlineInputBorder(),
+         enabledBorder:UnderlineInputBorder(
+           borderSide: BorderSide(
+             color:Colors.white,
+             width:1.0
+           ), 
+         ),
+         hintText: 'Password',
+         hintStyle: TextStyle(color:ColorPalette.hintColor), 
+       ), 
+        style: const TextStyle(color: Colors.white),
+        autofocus: true,
+        obscureText: true,
+      )
+    ]
+  );
+}
 // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
 Widget _buildButton(BuildContext) {
   return Column(
@@ -124,3 +147,4 @@ Widget _buildButton(BuildContext) {
     ],
   );
 }
+
