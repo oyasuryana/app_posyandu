@@ -74,7 +74,7 @@ Widget _userField() {
           hintStyle: TextStyle(color: ColorPalette.hintColor),
         ),
         style: const TextStyle(color: Colors.white),
-        autofocus: true,
+        autofocus: false,
       ),
     ],
   );
@@ -129,8 +129,9 @@ Widget _buildButton(BuildContext) {
           fontSize: 12.0,
         ),
       ),
+      const Padding(padding: EdgeInsets.only(top:16.0),),
       // ignore: deprecated_member_use
-      FlatButton(
+      TextButton(
         child: const Text(
           "Register",
           style: TextStyle(color: Colors.white),

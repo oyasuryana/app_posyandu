@@ -23,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
           _titleDescription(),
           _usernameField(),
           _passwordField(),
-  //      _buildButton(context)
+          _buildButton(context)
         ],
       ),
     ));
@@ -64,7 +64,6 @@ Widget _titleDescription() {
 
 Widget _usernameField() {
   return Column(children: <Widget>[
-    const Padding(padding: EdgeInsets.only(top: 16.0)),
     TextFormField(
       decoration: const InputDecoration(
           border: UnderlineInputBorder(),
@@ -82,16 +81,14 @@ Widget _usernameField() {
           hintText: 'Username',
           hintStyle: TextStyle(color: ColorPalette.hintColor)),
       style: const TextStyle(color: Colors.white),
-      autofocus: true,
+      autofocus: false,
     ),
-    const Padding(padding: EdgeInsets.only(top: 12.0)),
   ]);
 }
 
 Widget _passwordField() {
   return Column(
     children: <Widget>[
-    const Padding(padding: EdgeInsets.only(top: 16.0)),
       TextFormField(
         decoration: const InputDecoration(
           border: UnderlineInputBorder(),
@@ -112,7 +109,45 @@ Widget _passwordField() {
   );
 }
 
-/*
-Widget _buildButton(BuildContext){
-
-}*/
+Widget _buildButton(BuildContext context) {
+  return Column(
+    children: <Widget>[
+      const Padding(padding: EdgeInsets.only(top: 16.0)),
+      InkWell(
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          width: double.infinity,
+          child: const Text(
+            'Buat Akun',
+            style: TextStyle(color: ColorPalette.primaryColor),
+            textAlign: TextAlign.center,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+        ),
+      ),
+      Padding(
+        padding: EdgeInsets.only(top:16.0)
+      ),
+      Text(
+        'atau',
+       style: TextStyle(
+        color: Colors.white,
+        fontSize:12.0
+       ),
+      ),
+      const Padding(padding: EdgeInsets.only(top:16.0),),
+      TextButton(
+        child: Text(
+          'Login',
+          style: TextStyle(color: Colors.white),
+        ),
+        onPressed: (){
+          Navigator.pushNamed(context, "/");
+        },
+      )
+    ],
+  );
+}
