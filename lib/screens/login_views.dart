@@ -17,7 +17,6 @@ class LoginPage extends StatelessWidget {
         children: <Widget>[
           _iconLogin(),
           _titleDescription(),
-          //_textField(),
           _userField(),
           _buildButton(context)
         ],
@@ -69,7 +68,9 @@ Widget _userField() {
                 color: Colors.white,
                 width: 1.0,
               ),
-            )),
+            ),
+            hintText: 'Username'
+          ),
         
         style: const TextStyle(color: Colors.white),
         autofocus: true,
@@ -78,57 +79,6 @@ Widget _userField() {
   );
 }
 
-Widget _textField() {
-  return Column(children: <Widget>[
-    const Padding(
-      padding: EdgeInsets.only(top: 12.0),
-    ),
-    TextFormField(
-      decoration: const InputDecoration(
-        border: UnderlineInputBorder(),
-        enabledBorder: UnderlineInputBorder(
-          borderSide:
-              BorderSide(color: ColorPalette.underLineTextField, width: 1.5),
-        ),
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white,
-            width: 3.0,
-          ),
-        ),
-      ),
-
-//       hintText: "Username",
-//        hintStyle: const TextStyle( color: Colors.white,),
-      style: const TextStyle(color: Colors.white),
-      autofocus: false,
-    ),
-    const Padding(
-      padding: EdgeInsets.only(top: 12 / 0),
-    ),
-    TextFormField(
-      decoration: const InputDecoration(
-        border: UnderlineInputBorder(),
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorPalette.underLineTextField,
-            width: 1.5,
-          ),
-        ),
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white,
-            width: 3.0,
-          ),
-        ),
-        hintText: "Password",
-        hintStyle: TextStyle(color: ColorPalette.hintColor),
-      ),
-      style: const TextStyle(color: Colors.white),
-      autofocus: false,
-    ),
-  ]);
-}
 
 // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
 Widget _buildButton(BuildContext) {
