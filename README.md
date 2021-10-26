@@ -1,17 +1,11 @@
-# app_posyandu_2
+# Aplikasi Posyandu
 
-A new Flutter project.
+Dibuat oleh Kelompok X Diklat Pelatihan Flutter PPTIK ITB Oktober 2021.
 
-## Getting Started
+# Informasi Project
 
-This project is a starting point for a Flutter application.
+Project ini menggunakan Fluter Versi 2.5.2 dengan bahasa pemrograman Dart versi 2.14.3
 
-A few resources to get you started if this is your first Flutter project:
+# Deskripsi Aplikasi
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-#Aplikasi Posyandu
+Aplikasi ini adalah frontend bagi ibu hamil / Ibu Bayi dan Balita untuk mendata perkembangan kunjungan ke Posyandu. 
